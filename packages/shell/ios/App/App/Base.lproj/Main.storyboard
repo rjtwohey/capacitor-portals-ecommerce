@@ -9,7 +9,7 @@
         <!--Portals View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PortalsViewController" customModule="IonicEnterpriseCapacitorPortals" sceneMemberID="viewController"/>
+                <viewController id="BYZ-38-t0r" customClass="FederatedCapacitorViewController" customModule="IonicEnterpriseFederatedCapacitor" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="134"/>
