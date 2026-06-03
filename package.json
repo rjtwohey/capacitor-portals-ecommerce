@@ -3,18 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "cross-env CAP_BUILD=true nx run-many --target=build --all",
-    "serve": "nx run-many --target=serve --all",
-    "lint": "nx run-many --target=lint --all",
-    "fmt": "nx run-many --target=fmt --all",
-    "start": "nx run-many --target=start --all",
+    "build": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run-many --target=build --all",
+    "serve": "cross-env NX_INTERACTIVE=false nx run-many --target=serve --all",
+    "lint": "cross-env NX_INTERACTIVE=false nx run-many --target=lint --all",
+    "fmt": "cross-env NX_INTERACTIVE=false nx run-many --target=fmt --all",
+    "start": "cross-env NX_INTERACTIVE=false nx run-many --target=start --all",
     "reset": "find . -type dir -name node_modules | xargs rm -rf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "nx": "14.1.9",
-    "typescript": "^4.3.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^10.1.0",
+    "nx": "22.7.5",
+    "typescript": "^6.0.3"
   },
   "author": "ionic-team",
   "packageManager": "pnpm@7.1.8"

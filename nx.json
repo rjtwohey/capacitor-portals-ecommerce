@@ -42,5 +42,6 @@
     "@nrwl/js": {
       "analyzeSourceFiles": false
     }
-  }
+  },
+  "analytics": false
 }

@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "dependencies": {
-    "@capacitor/core": "^3.0.0",
-    "typescript": "^4.3.2",
-    "react": "^17.0.2"
+    "@capacitor/core": "8.4.0",
+    "react": "^17.0.2",
+    "typescript": "^4.3.2"
   },
   "types": "./dist/index.d.ts",
   "devDependencies": {

@@ -1,14 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  IonBackButton,
-  IonButtons,
-  IonContent,
-  IonHeader,
   IonIcon,
   IonItem,
-  IonPage,
-  IonTitle,
-  IonToolbar,
 } from '@ionic/react';
 import { callOutline, mailOutline } from 'ionicons/icons';
 

@@ -24,11 +24,10 @@ interface CheckoutPageProps {
 }
 
 const CheckoutPage: React.FC<CheckoutPageProps> = ({ onDismiss }) => {
-  const { cart, user, checkout } = useContext(DataContext);
+  const { cart, user } = useContext(DataContext);
   const [selectedAddress, setSelectedAddress] = useState<Address>();
   const [selectedCreditCard, setSelectedCreditCard] = useState<CreditCard>();
   const router = useIonRouter();
-
 
   useEffect(() => {
     if (user && !selectedAddress) {

@@ -4,10 +4,9 @@
 	"webDir": "../shell/build",
 	"bundledWebRuntime": false,
 	"plugins": {
-		"Portals": {
+		"FederatedCapacitor": {
 			"shell": {
 				"name": "shell",
-				"webDir": "./build",
 				"liveUpdateConfig": {
 					"appId": "e9597b11",
 					"channel": "production",

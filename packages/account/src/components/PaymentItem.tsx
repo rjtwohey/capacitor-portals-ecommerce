@@ -2,7 +2,6 @@ import {
   IonItem,
   IonCheckbox,
   IonLabel,
-  IonChip,
   IonButton,
   useIonRouter,
 } from '@ionic/react';
@@ -20,7 +19,7 @@ const PaymentItem: React.FC<PaymentItemProps> = ({
   creditCard,
   onPaymentSelected = () => {},
   selectable = true,
-  selectedId
+  selectedId,
 }) => {
   const router = useIonRouter();
   return (
