@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "ci:install": "corepack enable && corepack prepare pnpm@8.15.9 --activate && pnpm install --no-frozen-lockfile",
-    "build:shell": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run shell:build",
-    "build:account": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run account:build",
+    "build:provider-lib": "pnpm --filter provider-lib run build",
+    "build:shell": "pnpm run build:provider-lib && cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run shell:build",
+    "build:account": "pnpm run build:provider-lib && cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run account:build",
     "build": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run-many --target=build --all",
     "serve": "cross-env NX_INTERACTIVE=false nx run-many --target=serve --all",
     "lint": "cross-env NX_INTERACTIVE=false nx run-many --target=lint --all",
