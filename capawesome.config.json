@@ -1,0 +1,14 @@
+{
+    "cloud": {
+        "apps": [
+            {
+                "appId": "d1024a49-c39a-4954-9664-68e7b905c593",
+                "baseDir": "packages/shell/"
+            },
+            {
+                "appId": "d3ffb67d-f22c-4590-9f2d-58b2c1eb68d5",
+                "baseDir": "packages/account/"
+            }
+        ]
+    }
+}
