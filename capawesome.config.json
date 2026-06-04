@@ -4,13 +4,13 @@
             {
                 "appId": "d1024a49-c39a-4954-9664-68e7b905c593",
                 "baseDir": "packages/shell",
-                "dependencyInstallCommand": "cd ../.. && npm install -g pnpm && corepack enable && corepack prepare pnpm@7.1.8 --activate && pnpm install --frozen-lockfile",
+                "dependencyInstallCommand": "cd ../.. && corepack enable && corepack prepare pnpm@8.15.9 --activate && pnpm install --no-frozen-lockfile",
                 "webBuildCommand": "cd ../.. && pnpm exec nx run shell:build"
             },
             {
                 "appId": "d3ffb67d-f22c-4590-9f2d-58b2c1eb68d5",
                 "baseDir": "packages/account",
-                "dependencyInstallCommand": "cd ../.. && npm install -g pnpm && corepack enable && corepack prepare pnpm@7.1.8 --activate && pnpm install --frozen-lockfile",
+                "dependencyInstallCommand": "cd ../.. && corepack enable && corepack prepare pnpm@8.15.9 --activate && pnpm install --no-frozen-lockfile",
                 "webBuildCommand": "cd ../.. && pnpm exec nx run account:build"
             }
         ]
