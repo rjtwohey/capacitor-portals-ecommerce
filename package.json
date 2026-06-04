@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "ci:install": "corepack enable && corepack prepare pnpm@7.1.8 --activate && pnpm install --frozen-lockfile",
+    "build:shell": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run shell:build",
     "build": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run-many --target=build --all",
     "serve": "cross-env NX_INTERACTIVE=false nx run-many --target=serve --all",
     "lint": "cross-env NX_INTERACTIVE=false nx run-many --target=lint --all",
