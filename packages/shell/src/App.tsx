@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import {
   IonApp,
   IonTabs,
@@ -48,18 +49,6 @@ const UserDetailPage = React.lazy(() => import('account/UserDetailPage'));
 const PaymentPage = React.lazy(() => import('checkout/PaymentPage'));
 
 setupIonicReact();
-
-syncAll({
-  onAppComplete: (result: SyncResult) => {
-    console.log("syncAll App Complete: ", JSON.stringify(result))
-  },
-  onSyncComplete: () => {
-    console.log("syncAll is completed.")
-  },
-  onError: (error: LiveUpdateError) => {
-    console.log("syncAll Error: ", JSON.stringify(error))
-  }
-})
 /**/
 /**/
 /* syncSome({ appIds: ["e9597b11"] }, { */
@@ -78,7 +67,32 @@ syncAll({
 /*   .then((result: LiveUpdate) => console.log("syncOne ", JSON.stringify(result))) */
 /*   .catch((error: LiveUpdateError) => console.log("syncOne Error: ", JSON.stringify(error))); */
 
+const enableLiveUpdate = import.meta.env.VITE_ENABLE_LIVE_UPDATE === 'true';
+
 const App: React.FC = () => {
+  useEffect(() => {
+    if (!enableLiveUpdate) {
+      console.log('live update sync disabled for local boot');
+      return;
+    }
+
+    try {
+      void syncAll({
+        onAppComplete: (result: SyncResult) => {
+          console.log('syncAll App Complete: ', JSON.stringify(result));
+        },
+        onSyncComplete: () => {
+          console.log('syncAll is completed.');
+        },
+        onError: (error: LiveUpdateError) => {
+          console.log('syncAll Error: ', JSON.stringify(error));
+        },
+      });
+    } catch (error) {
+      console.error('syncAll crashed during startup:', error);
+    }
+  }, []);
+
   return (
     <DataProvider>
       <IonApp>

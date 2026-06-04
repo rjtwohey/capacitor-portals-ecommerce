@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
+import topLevelAwait from 'vite-plugin-top-level-await';
 
 const isCapBuild = process.env.CAP_BUILD != null;
 
@@ -46,6 +47,10 @@ export default defineConfig({
         '@capacitor/core': { singleton: true },
         'provider-lib': { singleton: true },
       },
+    }),
+    topLevelAwait({
+      promiseExportName: '__tla',
+      promiseImportName: (i) => `__tla_${i}`,
     }),
   ],
   build: {
