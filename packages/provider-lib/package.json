@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "main": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": "./dist/*"
+  },
   "dependencies": {
     "@capacitor/core": "8.4.0",
     "react": "^17.0.2",
