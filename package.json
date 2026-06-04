@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "ci:install": "corepack enable && corepack prepare pnpm@7.1.8 --activate && pnpm install --frozen-lockfile",
+    "ci:install": "corepack enable && corepack prepare pnpm@8.15.9 --activate && pnpm install --no-frozen-lockfile",
     "build:shell": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run shell:build",
     "build": "cross-env CAP_BUILD=true NX_INTERACTIVE=false nx run-many --target=build --all",
     "serve": "cross-env NX_INTERACTIVE=false nx run-many --target=serve --all",
@@ -19,5 +19,5 @@
     "typescript": "^6.0.3"
   },
   "author": "ionic-team",
-  "packageManager": "pnpm@7.1.8"
+  "packageManager": "pnpm@8.15.9"
 }
