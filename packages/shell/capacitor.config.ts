@@ -4,17 +4,21 @@ const capacitorConfig: CapacitorConfig = {
   appId: 'io.ionic.portals.ecommercewebapp',
   appName: 'Portals Web App',
   webDir: '../shell/build',
-  bundledWebRuntime: false,
   plugins: {
     LiveUpdate: {
       appId: 'd1024a49-c39a-4954-9664-68e7b905c593',
       defaultChannel: 'default',
-      // readyTimeout: 10000,
-      // serverDomain: 'api.cloud.capawesome.io',
+      readyTimeout: 10000,
     },
     FederatedCapacitor: {
       shell: {
         name: 'shell',
+        liveUpdateConfig: {
+          appId: 'd1024a49-c39a-4954-9664-68e7b905c593',
+          channel: 'default',
+          autoUpdateMethod: 'background',
+          strategy: 'zip',
+        },
       },
       apps: [
         {
@@ -24,6 +28,7 @@ const capacitorConfig: CapacitorConfig = {
             appId: '3fde24f8',
             channel: 'production',
             autoUpdateMethod: 'none',
+            strategy: 'zip',
           },
         },
         {
