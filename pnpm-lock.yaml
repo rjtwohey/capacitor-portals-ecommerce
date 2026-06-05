@@ -250,8 +250,8 @@ importers:
         specifier: file:vendor/capawesome-live-update
         version: file:packages/shell/vendor/capawesome-live-update(@capacitor/core@8.4.0)
       '@ionic-enterprise/federated-capacitor':
-        specifier: '*'
-        version: 0.4.1(@capacitor/core@8.4.0)
+        specifier: 0.5.0-rc.0
+        version: 0.5.0-rc.0(@capacitor/core@8.4.0)
       '@ionic/react':
         specifier: 8.8.9
         version: 8.8.9(react-dom@17.0.2)(react@17.0.2)
@@ -2295,8 +2295,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     deprecated: Use @eslint/object-schema instead
 
-  /@ionic-enterprise/federated-capacitor@0.4.1(@capacitor/core@8.4.0):
-    resolution: {integrity: sha512-SuUvU3dHeERay76kTh5xmo8A0zJYTCWj7AeYBrgzLEIf9cRuohHddZIlaUezRkDD2KGyT5bSzg/9lmlsTSaUmA==}
+  /@ionic-enterprise/federated-capacitor@0.5.0-rc.0(@capacitor/core@8.4.0):
+    resolution: {integrity: sha512-H1Oy0KwmD/02Ac0Hfa6GVcrKnkaL3/dgZnilbQckqz9DdSY5kiWnA46DQ38sAx4gO8cl6tqsh6i2yvcxYbCdqw==}
     hasBin: true
     peerDependencies:
       '@capacitor/core': '>=8.0.0'

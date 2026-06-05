@@ -8,7 +8,7 @@
     "@capacitor/core": "8.4.0",
     "@capacitor/ios": "8.4.0",
     "@capawesome/capacitor-live-update": "file:vendor/capawesome-live-update",
-    "@ionic-enterprise/federated-capacitor": "*",
+    "@ionic-enterprise/federated-capacitor": "0.5.0-rc.0",
     "@ionic/react": "8.8.9",
     "@ionic/react-router": "8.8.9",
     "@testing-library/jest-dom": "^5.12.0",
@@ -32,12 +32,12 @@
   "devDependencies": {
     "@capacitor/cli": "8.4.0",
     "@originjs/vite-plugin-federation": "^1.4.1",
-    "@vitejs/plugin-react": "^4.6.0",
     "@types/react-router": "^5.1.14",
+    "@vitejs/plugin-react": "^4.6.0",
     "serve": "^13.0.2",
     "typescript": "^4.3.2",
-    "vite-plugin-top-level-await": "^1.5.0",
-    "vite": "^5.4.19"
+    "vite": "^5.4.19",
+    "vite-plugin-top-level-await": "^1.5.0"
   },
   "scripts": {
     "start": "vite --port 3001",
