@@ -54,7 +54,7 @@ const CartPage: React.FC<RouteComponentProps<{}>> = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense" translucent={true}>
           <IonToolbar>
-            <IonTitle size="large">Cart 22</IonTitle>
+            <IonTitle size="large">Cart 25</IonTitle>
           </IonToolbar>
         </IonHeader>
         {!cart || cart.basket?.length === 0 ? (
