@@ -48,13 +48,13 @@ const CartPage: React.FC<RouteComponentProps<{}>> = () => {
     <IonPage ref={pageEl}>
       <IonHeader translucent={true}>
         <IonToolbar>
-          <IonTitle>Cart 2</IonTitle>
+          <IonTitle>Cart</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense" translucent={true}>
           <IonToolbar>
-            <IonTitle size="large">Cart 2</IonTitle>
+            <IonTitle size="large">Cart</IonTitle>
           </IonToolbar>
         </IonHeader>
         {!cart || cart.basket?.length === 0 ? (
