@@ -48,7 +48,7 @@ const CartPage: React.FC<RouteComponentProps<{}>> = () => {
     <IonPage ref={pageEl}>
       <IonHeader translucent={true}>
         <IonToolbar>
-          <IonTitle>Cart 22</IonTitle>
+          <IonTitle>Cart 25</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

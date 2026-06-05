@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   IonApp,
   IonTabs,
@@ -38,7 +38,7 @@ import { ShopPage } from './pages/ShopPage';
 import { ItemPage } from './pages/ItemPage';
 import { CartPage } from './pages/CartPage';
 import { HelpPageShell } from './pages/HelpPageShell';
-import { syncAll, LiveUpdateError, SyncResult } from '@ionic-enterprise/federated-capacitor';
+import { syncAll, reload, LiveUpdateError } from '@ionic-enterprise/federated-capacitor';
 
 // @ts-ignore
 const AddressPage = React.lazy(() => import('account/AddressPage'));
@@ -67,8 +67,11 @@ setupIonicReact();
 /*   .catch((error: LiveUpdateError) => console.log("syncOne Error: ", JSON.stringify(error))); */
 
 const enableLiveUpdate = import.meta.env.PROD && import.meta.env.VITE_ENABLE_LIVE_UPDATE !== 'false';
+const shellBundleStorageKey = 'shell.liveUpdate.capawesome.bundleId';
 
 const App: React.FC = () => {
+  const shouldReloadRef = useRef(false);
+
   useEffect(() => {
     if (!enableLiveUpdate) {
       console.log('live update sync disabled for local boot');
@@ -77,10 +80,36 @@ const App: React.FC = () => {
 
     try {
       void syncAll({
-        onAppComplete: (result: SyncResult) => {
+        onAppComplete: (result: any) => {
           console.log('syncAll App Complete: ', JSON.stringify(result));
+
+          if (result.appName !== 'shell' || result.providerId !== 'capawesome') {
+            return;
+          }
+
+          const bundleId =
+            result.metadata && typeof result.metadata.bundleId === 'string'
+              ? result.metadata.bundleId
+              : undefined;
+
+          if (!bundleId) {
+            return;
+          }
+
+          const lastAppliedBundleId = localStorage.getItem(shellBundleStorageKey);
+          if (lastAppliedBundleId !== bundleId) {
+            localStorage.setItem(shellBundleStorageKey, bundleId);
+            shouldReloadRef.current = true;
+          }
         },
-        onSyncComplete: () => {
+        onSyncComplete: async () => {
+          if (shouldReloadRef.current) {
+            shouldReloadRef.current = false;
+            console.log('new shell bundle detected, reloading webview');
+            await reload();
+            return;
+          }
+
           console.log('syncAll is completed.');
         },
         onError: (error: LiveUpdateError) => {
