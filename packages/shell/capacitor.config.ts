@@ -20,7 +20,7 @@ const capacitorConfig: CapacitorConfig = {
             appId: 'd1024a49-c39a-4954-9664-68e7b905c593',
             channel: 'default',
           },
-          autoUpdateMethod: 'background',
+          autoUpdateMethod: 'none',
         },
       },
       apps: [

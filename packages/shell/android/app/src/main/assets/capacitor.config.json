@@ -12,10 +12,13 @@
 			"shell": {
 				"name": "shell",
 				"liveUpdateConfig": {
-					"appId": "d1024a49-c39a-4954-9664-68e7b905c593",
-					"channel": "default",
-					"autoUpdateMethod": "background",
-					"strategy": "zip"
+					"providerId": "capawesome",
+					"providerConfig": {
+						"managerKey": "shell",
+						"appId": "d1024a49-c39a-4954-9664-68e7b905c593",
+						"channel": "default"
+					},
+					"autoUpdateMethod": "none"
 				}
 			},
 			"apps": [
