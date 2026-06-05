@@ -6,14 +6,17 @@ use_frameworks!
 # Requires CocoaPods 1.6 or newer
 install! 'cocoapods', :disable_input_output_paths => true
 
+capawesome_live_update_path = '../../../../node_modules/.pnpm/file+packages+shell+vendor+capawesome-live-update_@capacitor+core@8.4.0/node_modules/@capawesome/capacitor-live-update'
+
 def capacitor_pods
   pod 'Capacitor', :path => '../../../../node_modules/.pnpm/@capacitor+ios@8.4.0_@capacitor+core@8.4.0/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../../../node_modules/.pnpm/@capacitor+ios@8.4.0_@capacitor+core@8.4.0/node_modules/@capacitor/ios'
   pod 'CapacitorCamera', :path => '../../../../node_modules/.pnpm/@capacitor+camera@8.2.0_@capacitor+core@8.4.0/node_modules/@capacitor/camera'
+  pod 'CapawesomeCapacitorLiveUpdate', :path => '../../../../node_modules/.pnpm/file+packages+shell+vendor+capawesome-live-update_@capacitor+core@8.4.0/node_modules/@capawesome/capacitor-live-update'
   pod 'IonicEnterpriseFederatedCapacitor', :path => '../../../../node_modules/.pnpm/@ionic-enterprise+federated-capacitor@0.4.1_@capacitor+core@8.4.0/node_modules/@ionic-enterprise/federated-capacitor'
 end
 
 target 'App' do
   capacitor_pods
-  # Add your Pods here
+  pod 'CapawesomeCapacitorLiveUpdate/IonicProvider', :path => capawesome_live_update_path
 end

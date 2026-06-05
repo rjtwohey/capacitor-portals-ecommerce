@@ -5,5 +5,8 @@ project(':capacitor-android').projectDir = new File('../../../node_modules/.pnpm
 include ':capacitor-camera'
 project(':capacitor-camera').projectDir = new File('../../../node_modules/.pnpm/@capacitor+camera@8.2.0_@capacitor+core@8.4.0/node_modules/@capacitor/camera/android')
 
+include ':capawesome-capacitor-live-update'
+project(':capawesome-capacitor-live-update').projectDir = new File('../../../node_modules/.pnpm/file+packages+shell+vendor+capawesome-live-update_@capacitor+core@8.4.0/node_modules/@capawesome/capacitor-live-update/android')
+
 include ':ionic-enterprise-federated-capacitor'
 project(':ionic-enterprise-federated-capacitor').projectDir = new File('../../../node_modules/.pnpm/@ionic-enterprise+federated-capacitor@0.4.1_@capacitor+core@8.4.0/node_modules/@ionic-enterprise/federated-capacitor/android')

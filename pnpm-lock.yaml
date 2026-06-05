@@ -246,6 +246,9 @@ importers:
       '@capacitor/ios':
         specifier: 8.4.0
         version: 8.4.0(@capacitor/core@8.4.0)
+      '@capawesome/capacitor-live-update':
+        specifier: file:vendor/capawesome-live-update
+        version: file:packages/shell/vendor/capawesome-live-update(@capacitor/core@8.4.0)
       '@ionic-enterprise/federated-capacitor':
         specifier: '*'
         version: 0.4.1(@capacitor/core@8.4.0)
@@ -12224,3 +12227,13 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  file:packages/shell/vendor/capawesome-live-update(@capacitor/core@8.4.0):
+    resolution: {directory: packages/shell/vendor/capawesome-live-update, type: directory}
+    id: file:packages/shell/vendor/capawesome-live-update
+    name: '@capawesome/capacitor-live-update'
+    peerDependencies:
+      '@capacitor/core': '>=8.0.0'
+    dependencies:
+      '@capacitor/core': 8.4.0
+    dev: false

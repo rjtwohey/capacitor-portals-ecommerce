@@ -1,5 +1,6 @@
 ext {
-    minSdkVersion = 21
+    minSdkVersion = 24
+    capawesomeCapacitorLiveUpdateIncludeIonicProvider = true
     compileSdkVersion = 30
     targetSdkVersion = 30
     androidxActivityVersion = '1.2.0'

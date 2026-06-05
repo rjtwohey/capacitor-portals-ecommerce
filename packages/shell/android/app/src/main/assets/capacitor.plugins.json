@@ -4,6 +4,10 @@
 		"classpath": "com.capacitorjs.plugins.camera.CameraPlugin"
 	},
 	{
+		"pkg": "@capawesome/capacitor-live-update",
+		"classpath": "io.capawesome.capacitorjs.plugins.liveupdate.LiveUpdatePlugin"
+	},
+	{
 		"pkg": "@ionic-enterprise/federated-capacitor",
 		"classpath": "com.capacitorjs.federated.FedCapPlugin"
 	}

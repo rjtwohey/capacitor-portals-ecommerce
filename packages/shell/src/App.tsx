@@ -38,7 +38,6 @@ import { ShopPage } from './pages/ShopPage';
 import { ItemPage } from './pages/ItemPage';
 import { CartPage } from './pages/CartPage';
 import { HelpPageShell } from './pages/HelpPageShell';
-
 import { syncAll, LiveUpdateError, SyncResult } from '@ionic-enterprise/federated-capacitor';
 
 // @ts-ignore
@@ -67,7 +66,7 @@ setupIonicReact();
 /*   .then((result: LiveUpdate) => console.log("syncOne ", JSON.stringify(result))) */
 /*   .catch((error: LiveUpdateError) => console.log("syncOne Error: ", JSON.stringify(error))); */
 
-const enableLiveUpdate = import.meta.env.VITE_ENABLE_LIVE_UPDATE === 'true';
+const enableLiveUpdate = import.meta.env.PROD && import.meta.env.VITE_ENABLE_LIVE_UPDATE !== 'false';
 
 const App: React.FC = () => {
   useEffect(() => {

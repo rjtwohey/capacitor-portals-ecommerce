@@ -6,14 +6,15 @@ const capacitorConfig: CapacitorConfig = {
   webDir: '../shell/build',
   bundledWebRuntime: false,
   plugins: {
+    LiveUpdate: {
+      appId: 'd1024a49-c39a-4954-9664-68e7b905c593',
+      defaultChannel: 'default',
+      // readyTimeout: 10000,
+      // serverDomain: 'api.cloud.capawesome.io',
+    },
     FederatedCapacitor: {
       shell: {
         name: 'shell',
-        liveUpdateConfig: {
-          appId: 'e9597b11',
-          channel: 'production',
-          autoUpdateMethod: 'none',
-        },
       },
       apps: [
         {

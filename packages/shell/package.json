@@ -7,6 +7,7 @@
     "@capacitor/camera": "8.2.0",
     "@capacitor/core": "8.4.0",
     "@capacitor/ios": "8.4.0",
+    "@capawesome/capacitor-live-update": "file:vendor/capawesome-live-update",
     "@ionic-enterprise/federated-capacitor": "*",
     "@ionic/react": "8.8.9",
     "@ionic/react-router": "8.8.9",
